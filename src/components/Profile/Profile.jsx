@@ -4,7 +4,7 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
             <div>
                 <img src='https://glass-vector.com/static/preview2/stock-vector-kuhonnyy-fartuk-354-12999.jpg' />
             </div>
