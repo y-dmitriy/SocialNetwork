@@ -9,7 +9,7 @@ import Music from './components/Music/Music.jsx';
 import Settings from './components/Settings/Settings.jsx';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
@@ -21,9 +21,8 @@ const App = () => {
           <Route to path='/news' component={News} />
           <Route to path='/music' component={Music} />
           <Route to path='/settings' component={Settings} /> */}
-
-          <Route to path='/profile' render={() => <Profile />} />
-          <Route to path='/dialogs' render={() => <Dialogs />} />
+          <Route to path='/profile' render={() => <Profile posts={props.posts} />} />
+          <Route to path='/dialogs' render={() => <Dialogs dialogs={props.dialogs} messages={props.messages} />} />
           <Route to path='/news' render={() => <News />} />
           <Route to path='/music' render={() => <Music />} />
           <Route to path='/settings' render={() => <Settings />} />
