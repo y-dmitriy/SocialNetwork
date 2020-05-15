@@ -11,24 +11,18 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className='app-wrapper'>
-        <Header />
-        <Navbar />
-        <div className='app-wrapper-content'>
-          {/* <Route to path='/profile' component={Profile} />
-          <Route to path='/dialogs' component={Dialogs} />
-          <Route to path='/news' component={News} />
-          <Route to path='/music' component={Music} />
-          <Route to path='/settings' component={Settings} /> */}
-          <Route to path='/profile' render={() => <Profile state={props.state.profilePage} />} />
-          <Route to path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} />} />
-          <Route to path='/news' render={() => <News />} />
-          <Route to path='/music' render={() => <Music />} />
-          <Route to path='/settings' render={() => <Settings />} />
-        </div>
+    <div className='app-wrapper'>
+      <Header />
+      <Navbar />
+      <div className='app-wrapper-content'>
+        <Route to path='/profile' render={() => <Profile state={props.state.profilePage} />} />
+        <Route to path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} />} />
+        <Route to path='/news' render={() => <News />} />
+        <Route to path='/music' render={() => <Music />} />
+        <Route to path='/settings' render={() => <Settings />} />
       </div>
-    </BrowserRouter>);
+    </div>
+  )
 }
 
 export default App;
